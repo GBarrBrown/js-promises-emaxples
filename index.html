@@ -5,9 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JS Promises Example</title>
-    <script src="./script.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- <script src="./script.js"></script> -->
+    <script src="./script2.js"></script>
 </head>
 <body>
+    <h1>JS Promises Examples</h1>
+    <h4>This is a test ground for me to get a better grip of Javascript Promises</h4>
+    <h4>To get an idea of what is actually happening, open up the chrome console in devtools (f12)</h4>
+    <p>-- -- -- --</p>
+    <h3>What is a promise?</h3>
+    <p>"A promise is an object representing the eventual completion or failure of an operation"</p>
+    <p>An object can be in one of three states: Pending, Resolved or Rejected</p>
+    <button onclick="showPendingPromise()">create & show a <strong>pending</strong> promise</button><br />
+    <button onclick="showResolvedPromise()">create & show a <strong>resolved</strong> promise</button><br />
+    <button onclick="createRejectedPromise()">create & show a <strong>rejected</strong> promise</button><br />
     
+    <hr />
+    <h3>Why use promises?</h3>
+    <p>Promises are non-blocking, meaning that while a promise is in its pending state other code can still execute (even other promises)</p>
+    <p>This can be demonstrated by starting a 5 second wait, then immediately starting a 1 second wait</p>
+    <p>The 5 second wait is still going to come back with it's confirmation once after 5 seconds, but in the mean time we are free to call a 1 second wait</p>
+    <button onclick="wait1sec()">wait 1 second</button>
+    <br />
+    <button onclick="wait5sec()">wait 5 seconds</button>
 </body>
 </html>
